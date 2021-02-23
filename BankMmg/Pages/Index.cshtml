@@ -170,7 +170,7 @@
 
 
                         </div>
-                        <button type="button" class="btn btn-primary" onclick="updateBankSystem()">Update</button>
+                        <button type="button" class="btn btn-primary" onclick="updateEmployee()">Update</button>
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -255,7 +255,7 @@
             }).done(function (response) {
                 $('#Update_id').val(response.id);
                 $('#Update_employee_Name').val(response.employee_Name);
-                $('#Update_employee_Position ').val(response.employee_Position);
+                $('#Update_employee_Position').val(response.employee_Position);
                 $('#Update_employee_Email').val(response.employee_Email);
                 $('#Update_employee_Contact').val(response.employee_Contact);
                 $('#Update_employee_Address').val(response.employee_Address);
@@ -263,14 +263,13 @@
         }
         // function to update data of the student
         function updateEmployee() {
-            var yes = confirm("Are you sure you want to delete this student?");
             var _employee_Name = $('#Update_employee_Name').val();
             var _employee_Position = $('#Update_employee_Position').val();
             var _employee_Email = $('#Update_employee_Email').val();
             var _employee_Contact = $('#Update_employee_Contact').val();
             var _employee_Address = $('#Update_employee_Address').val();
             var BankManagementUpdate = {
-                iD: parseInt($('#Update_id').val()),
+                id: parseInt($('#Update_id').val()),
                 employee_Name: _employee_Name,
                 employee_Position: _employee_Position,
                 employee_Email: _employee_Email,
