@@ -10,7 +10,7 @@ namespace BankMmg.Models
     {
         [Key]
 
-        public int ID { get; set; }
+        public int Id { get; set; }
         public String employee_Name { get; set; }
         public String employee_Position { get; set; }
         public String employee_Email { get; set; }
